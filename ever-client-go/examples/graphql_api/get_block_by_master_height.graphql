@@ -1,0 +1,24 @@
+query{ blockchain{
+	transactions(
+master_seq_no_range: { start: 2660661 end: 2660762 },after:"",
+		archive:true
+){ edges{ node{ hash
+	orig_status
+	end_status
+	tr_type_name
+	aborted
+	status_name
+total_fees(format: DEC)
+	ext_in_msg_fee(format: DEC)
+	in_message{ hash
+		bounced
+		bounce
+
+msg_type_name src_account { address } dst_account { address } body
+value(format: DEC) fwd_fee(format: DEC) ihr_fee(format: DEC)
+created_lt(format: DEC) data } out_messages { hash msg_type_name
+src_account { address } dst_account { address } value(format: DEC)
+fwd_fee(format: DEC) ihr_fee(format: DEC) created_lt(format: DEC)
+data } account { address } lt(format: DEC) balance_delta(format: DEC)
+workchain_id block_id master_seq_no now } cursor } pageInfo{
+startCursor endCursor hasNextPage }}}}

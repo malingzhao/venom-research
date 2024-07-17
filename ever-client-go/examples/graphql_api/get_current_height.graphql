@@ -1,0 +1,15 @@
+query {
+  blocks(filter:{
+    seq_no: {gt:1}
+    workchain_id: {eq:0}
+  },
+  orderBy:{
+    path :"seq_no"
+    direction : DESC
+  },
+  limit:1)
+  {
+    master_seq_no
+  }
+
+}
